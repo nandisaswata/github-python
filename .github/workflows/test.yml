@@ -26,14 +26,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Execute pythin script
-      run: |
-        python ./src/run.py
     - name: Create report file
       uses: actions/checkout@v2
     - name: Commit report
       run: |
         date > ./result/report.txt
+        python ./src/run.py
         git config --global user.name 'nandisaswata'
         git config --global user.email 'snandi@iitb.ac.in'
         git add ./result/report.txt
