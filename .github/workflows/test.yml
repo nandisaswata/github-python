@@ -36,6 +36,7 @@ jobs:
         date +%s > ./result/report.txt
         git config --global user.name 'nandisaswata'
         git config --global user.email 'snandi@iitb.ac.in'
+        git add ./result/report.txt
         git commit -am "Automated report"
         git push        
       
