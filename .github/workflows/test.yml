@@ -22,7 +22,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run conda bash script
-      env:
-        ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}        
-      run: bash deploy_conda.sh
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Execute pythin script
+      run: |
+        python /src/run.py
+        
+      
