@@ -29,5 +29,13 @@ jobs:
     - name: Execute pythin script
       run: |
         python ./src/run.py
-        
+    - name: Create report file
+      uses: actions/checkout@v2
+    - name: Commit report
+      run: |
+        date +%s > ./result/report.txt
+        git config --global user.name 'nandisaswata'
+        git config --global user.email 'snandi@iitb.ac.in'
+        git commit -am "Automated report"
+        git push        
       
