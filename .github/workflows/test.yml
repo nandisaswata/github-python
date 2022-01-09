@@ -28,6 +28,6 @@ jobs:
         python-version: 3.8
     - name: Execute pythin script
       run: |
-        python /src/run.py
+        python ./src/run.py
         
       
