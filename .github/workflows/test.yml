@@ -4,12 +4,12 @@
 name: conda
 
 # Controls when the action will run.   
-#on:
-  #workflow_dispatch: 
-  
 on:
-  schedule:
-    - cron: "*/5 * * * *"  
+  workflow_dispatch: 
+  
+#on:
+  #schedule:
+    #- cron: "*/5 * * * *"  
   # # Triggers the workflow on push or pull request events but only for the master branch  
   # push:  
   #   branches: [ master ]  
